@@ -1,0 +1,15 @@
+minimization
+ &cntrl
+  imin   = 1,    ! minimization run
+  maxcyc = 1000, ! maximum number of minimization cycles
+  ntmin  = 1,    ! switch from steepest descent conj grad after ncyc
+  ncyc   = 500,  ! switch from steepest descent conj grad after ncyc
+  ntx    = 1,    ! initial coords do not have velocity info 
+  ntwr   = 500,  ! write restart file every ntwr steps
+  ntpr   = 50,   ! print energy info to mdout & mdinfo files
+  ntc    = 2,    ! constrain bonds involving H (SHAKE)
+  ntf    = 2,    ! omit bonds involving H from forces (with NTC=2)
+  ntb    = 1,    ! ntb=1 (NVT), ntb=2 (NPT)
+  cut    = 12.0, ! non-bonded cutoff (LJ)
+ /
+ 

@@ -1,0 +1,6 @@
+parm IID_solvated.prmtop
+trajin test-03_equil.nc
+autoimage anchor :1
+image center :1
+trajout 03_equil-processed.nc netcdf
+run

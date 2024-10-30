@@ -1,0 +1,20 @@
+Heating at constant volume
+ &cntrl
+  imin     = 0,     ! not a minimization
+  irest    = 0,     ! not restarting the simulation
+  ntx      = 1,     ! input crds (no vel) from .ncrst/.inpcrd
+  ntb      = 1,     ! ntb=1 (NVT), ntb=2 (NPT)
+  cut      = 12.0,  ! non-bonded cutoff (LJ)
+  ntc      = 2,     ! constrain bonds involving H (SHAKE)
+  ntf      = 2,     ! omit bonds involving H from forces (with NTC=2)
+  tempi    = 100.0, ! initial thermostat temp in Kelvin
+  temp0    = 300.0, ! final thermostat temp in Kelvin
+  ntt      = 3,     ! Langevin thermostat
+  ig       = -1,    ! seed for the (pseudo) random number generator
+  gamma_ln = 2.0,   ! Langevin thermostat collision frequency
+  nstlim   = 1000,  ! Number of steps (nstlim * dt = run length in ps)
+  dt       = 0.001, ! timestep
+  ntpr     = 10,    ! print to mdout file every ntpr steps
+  ntwx     = 10,    ! write mdcrd file every ntwx steps
+  ntwr     = 10,    ! write restart file every ntwr steps
+ /
