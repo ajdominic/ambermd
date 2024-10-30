@@ -2,6 +2,7 @@
 Tutorial for performing an MD simulation of isoindole in TIP3P water.
 
 <img width="326" alt="Screenshot 2024-10-30 at 2 51 33 PM" src="https://github.com/user-attachments/assets/74436583-466c-4d35-889e-9a76e167988f">
+<img width="422" alt="Screenshot 2024-10-30 at 3 04 13 PM" src="https://github.com/user-attachments/assets/d4d5aae9-1b5f-442a-9ffb-b51bbfab8be0">
 
 # Files
 You can download this tutorial from github, the resulting zip file will not have any trajectories from the MD simulations described below due to file size limits.
