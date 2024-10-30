@@ -1,0 +1,11 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff
+source leaprc.water.tip3p
+# loadamberparams frcmod.tip4pew
+loadamberparams IID.frcmod
+loadoff IID.lib
+system = loadpdb IID.pdb
+solvatebox system TIP3PBOX 12
+saveamberparm system IID_solvated.prmtop IID_solvated.inpcrd
+savepdb system IID_solvated.pdb
+quit

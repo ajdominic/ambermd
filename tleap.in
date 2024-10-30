@@ -1,0 +1,8 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff
+IID = loadmol2 IID.mol2
+check IID
+loadamberparams IID.frcmod
+saveoff IID IID.lib
+saveamberparm IID IID.prmtop IID.rst7
+quit
