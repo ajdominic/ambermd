@@ -1,0 +1,31 @@
+QM/MM NPT production without constraints
+&cntrl
+  imin        = 0,       ! not a minimization
+  irest       = 1,       ! read crds and velocities from input
+  ntx         = 5,       ! read crds and velocities from input
+  ntb         = 2,       ! ntb=1 (NVT), ntb=2 (NPT)
+  pres0       = 1.0,     ! reference pressure in bars
+  ntp         = 1,       ! isotropic position scaling
+  taup        = 2.0,     ! pressure relaxation time (ps)
+  cut         = 12.0,    ! non-bonded cutoff (LJ)
+  ntc         = 2,       ! constrain bonds involving H (SHAKE)
+  ntf         = 2,       ! omit bonds involving H from forces (with NTC=2)
+  temp0       = 300.0,   ! final thermostat temp in Kelvin
+  ntt         = 3,       ! Langevin temperature control
+  barostat    = 1,       ! Use the Berendsen barostat
+  ig          = -1,      ! seed for the (pseudo) random number generator
+  gamma_ln    = 2.0,     ! Langevin thermostat collision frequency
+  nstlim      = 1000000, ! Number of steps (nstlim * dt = run length in ps)
+  dt          = 0.001,   ! timestep
+  ifqnt       = 0,       ! QM/MM if ifqnt=1 or classical with ifqnt=0
+  ntpr        = 10,      ! print to mdout file every ntpr steps
+  ntwx        = 10,      ! write mdcrd file every ntwx steps
+  ntwr        = 10,      ! write restart file every ntwr steps
+ /
+&qmmm
+  qmmask      = ':1',  ! QM on molecule 1 (isoindole)
+  qmcharge    = 0,     ! charge of the QM region
+  qm_theory   = 'PM3', ! semi-empirical Hamiltonian
+  qmcut       = 12.0,  ! cut-off for interactions with classical region
+  qmshake     = 0,     ! do not constrain H atoms in the QM region
+ /
